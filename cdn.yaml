@@ -6,12 +6,12 @@ data:
   trafficFilters:
     rules:
       - name: block-xss
-         when:
-           reqProperty: tier
-           equals: "publish"
-         action:
+        when:
+          reqProperty: tier
+          equals: "publish"
+        action:
           type: block
-           wafFlags:
+          wafFlags:
             - XSS
       - name: "path-rule"
         when:
